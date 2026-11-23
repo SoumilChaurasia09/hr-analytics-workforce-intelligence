@@ -1,0 +1,27 @@
+Category,Variable,Test_Type,Null_Hypothesis,Test_Statistic,p_value,p_value_formatted,Degrees_of_Freedom,Effect_Size_Metric,Effect_Size,Conclusion
+Categorical,OverTime,Chi-Square Test,OverTime is independent of Attrition,87.5643,8.158423721538322e-21,8.16e-21,1,Cramér's V,0.2427,Statistically Significant (p < 0.001) ***
+Categorical,JobRole,Chi-Square Test,JobRole is independent of Attrition,86.1903,2.7524816380506567e-15,2.75e-15,8,Cramér's V,0.2307,Statistically Significant (p < 0.001) ***
+Categorical,MaritalStatus,Chi-Square Test,MaritalStatus is independent of Attrition,46.1637,9.455511060340833e-11,9.46e-11,2,Cramér's V,0.1734,Statistically Significant (p < 0.001) ***
+Categorical,Department,Chi-Square Test,Department is independent of Attrition,10.796,0.004525606574479634,0.0045,2,Cramér's V,0.0774,Significant (p < 0.05) *
+Categorical,Travel_Frequency,Chi-Square Test,Travel_Frequency is independent of Attrition,24.1824,5.608614476449931e-06,5.61e-06,2,Cramér's V,0.1229,Statistically Significant (p < 0.001) ***
+Categorical,StockOptionLevel,Chi-Square Test,StockOptionLevel is independent of Attrition,60.5983,4.379390336108354e-13,4.38e-13,3,Cramér's V,0.198,Statistically Significant (p < 0.001) ***
+Categorical,Job_Involvement_Level,Chi-Square Test,Job_Involvement_Level is independent of Attrition,28.492,2.8631806367134195e-06,2.86e-06,3,Cramér's V,0.1317,Statistically Significant (p < 0.001) ***
+Categorical,Environment_Satisfaction_Level,Chi-Square Test,Environment_Satisfaction_Level is independent of Attrition,22.5039,5.1234689062894327e-05,5.12e-05,3,Cramér's V,0.1152,Statistically Significant (p < 0.001) ***
+Categorical,Job_Satisfaction_Level,Chi-Square Test,Job_Satisfaction_Level is independent of Attrition,17.5051,0.0005563004510387556,0.0006,3,Cramér's V,0.0994,Statistically Significant (p < 0.001) ***
+Categorical,Work_Life_Balance_Level,Chi-Square Test,Work_Life_Balance_Level is independent of Attrition,16.3251,0.0009725698845348822,0.0010,3,Cramér's V,0.0952,Statistically Significant (p < 0.001) ***
+Categorical,Salary_Tier,Chi-Square Test,Salary_Tier is independent of Attrition,67.1655,8.995978145839354e-14,9.00e-14,4,Cramér's V,0.2074,Statistically Significant (p < 0.001) ***
+Categorical,Tenure_Cohort,Chi-Square Test,Tenure_Cohort is independent of Attrition,65.6951,3.561697895243279e-14,3.56e-14,3,Cramér's V,0.2066,Statistically Significant (p < 0.001) ***
+Categorical,Age_Group,Chi-Square Test,Age_Group is independent of Attrition,59.4387,3.8059830951364135e-12,3.81e-12,4,Cramér's V,0.1943,Statistically Significant (p < 0.001) ***
+Categorical,Commute_Tier,Chi-Square Test,Commute_Tier is independent of Attrition,11.3785,0.009845825207405337,0.0098,3,Cramér's V,0.0755,Significant (p < 0.05) *
+Categorical,Flight_Risk_Tier,Chi-Square Test,Flight_Risk_Tier is independent of Attrition,236.5572,4.2880201661113996e-52,4.29e-52,2,Cramér's V,0.3996,Statistically Significant (p < 0.001) ***
+Continuous,MonthlyIncome,Welch Two-Sample T-Test,Mean MonthlyIncome is identical for Stayers and Leavers,7.4826,4.4335886282860673e-13,4.43e-13,1468,Cohen's d,-0.44,Statistically Significant (p < 0.001) ***
+Continuous,Age,Welch Two-Sample T-Test,Mean Age is identical for Stayers and Leavers,5.828,1.3797600649439802e-08,1.38e-08,1468,Cohen's d,-0.4382,Statistically Significant (p < 0.001) ***
+Continuous,Total_Work_Experience,Welch Two-Sample T-Test,Mean Total_Work_Experience is identical for Stayers and Leavers,7.0192,1.1598167528069107e-11,1.16e-11,1468,Cohen's d,-0.4718,Statistically Significant (p < 0.001) ***
+Continuous,Company_Tenure,Welch Two-Sample T-Test,Mean Company_Tenure is identical for Stayers and Leavers,5.2826,2.2859051752725094e-07,2.29e-07,1468,Cohen's d,-0.3686,Statistically Significant (p < 0.001) ***
+Continuous,Role_Tenure,Welch Two-Sample T-Test,Mean Role_Tenure is identical for Stayers and Leavers,6.8471,3.1873903722051327e-11,3.19e-11,1468,Cohen's d,-0.442,Statistically Significant (p < 0.001) ***
+Continuous,Years_With_Manager,Welch Two-Sample T-Test,Mean Years_With_Manager is identical for Stayers and Leavers,6.6334,1.185021900003063e-10,1.19e-10,1468,Cohen's d,-0.4297,Statistically Significant (p < 0.001) ***
+Continuous,Years_Since_Promotion,Welch Two-Sample T-Test,Mean Years_Since_Promotion is identical for Stayers and Leavers,1.2879,0.19865128276906294,0.1987,1468,Cohen's d,-0.0898,Not Significant (p >= 0.05)
+Continuous,Distance_km,Welch Two-Sample T-Test,Mean Distance_km is identical for Stayers and Leavers,-2.8882,0.0041365119715114085,0.0041,1468,Cohen's d,0.2124,Significant (p < 0.05) *
+Continuous,PercentSalaryHike,Welch Two-Sample T-Test,Mean PercentSalaryHike is identical for Stayers and Leavers,0.5042,0.6144300580581376,0.6144,1468,Cohen's d,-0.0366,Not Significant (p >= 0.05)
+Continuous,Composite_Satisfaction_Score,Welch Two-Sample T-Test,Mean Composite_Satisfaction_Score is identical for Stayers and Leavers,5.8696,1.095288723097077e-08,1.10e-08,1468,Cohen's d,-0.4379,Statistically Significant (p < 0.001) ***
+Continuous,Salary_JobLevel_Ratio,Welch Two-Sample T-Test,Mean Salary_JobLevel_Ratio is identical for Stayers and Leavers,2.6193,0.009238686509734568,0.0092,1468,Cohen's d,-0.1991,Significant (p < 0.05) *

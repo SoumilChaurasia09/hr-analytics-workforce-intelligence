@@ -1,0 +1,12 @@
+JobRole,Department,Role_Headcount,Leavers,Role_Attrition_Rate,Avg_Role_Income,Avg_Role_Satisfaction,Risk_Rank
+Sales Representative,Sales,83,33,39.76,2626.0,2.74,1
+Laboratory Technician,Research & Development,259,62,23.94,3237.0,2.7,2
+Human Resources,Human Resources,52,12,23.08,4236.0,2.76,3
+Sales Executive,Sales,326,57,17.48,6924.0,2.73,4
+Research Scientist,Research & Development,292,47,16.1,3240.0,2.72,5
+Manufacturing Director,Research & Development,145,10,6.9,7295.0,2.77,6
+Healthcare Representative,Research & Development,131,9,6.87,7529.0,2.74,7
+Manager,Research & Development,54,3,5.56,17130.0,2.76,8
+Manager,Sales,37,2,5.41,16987.0,2.74,9
+Research Director,Research & Development,80,2,2.5,16034.0,2.69,10
+Manager,Human Resources,11,0,0.0,18089.0,2.84,11

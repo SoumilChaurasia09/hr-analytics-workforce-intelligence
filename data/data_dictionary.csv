@@ -1,0 +1,51 @@
+Column_Name,Data_Type,Distinct_Count,Sample_Values,Description
+Age,int64,43,"[41, 49, 37]",Current age of the employee in years
+Attrition,str,2,"['Yes', 'No']",Target variable: Whether the employee left the company (Yes/No)
+Travel_Frequency,str,3,"['Travel_Rarely', 'Travel_Frequently', 'Non-Travel']","Frequency of business travel (Non-Travel, Travel_Rarely, Travel_Frequently)"
+DailyRate,int64,886,"[1102, 279, 1373]",Daily billing/pay rate
+Department,str,3,"['Sales', 'Research & Development', 'Human Resources']","Operational department (Sales, R&D, Human Resources)"
+Distance_km,int64,29,"[1, 8, 2]",Commute distance from home to workplace in kilometers/miles
+Education,int64,5,"[2, 1, 4]",Education level code (1 to 5)
+EducationField,str,6,"['Life Sciences', 'Other', 'Medical']",Degree field of study
+EmployeeID,int64,1470,"[1, 2, 4]",Unique identifier for each employee
+EnvironmentSatisfaction,int64,4,"[2, 3, 4]",Environment satisfaction rating (1-4)
+Gender,str,2,"['Female', 'Male']",Employee biological gender
+HourlyRate,int64,71,"[94, 61, 92]",Hourly rate
+JobInvolvement,int64,4,"[3, 2, 4]",Job involvement level (1-4)
+JobLevel,int64,5,"[2, 1, 3]",Hierarchical seniority level in organization (1-5)
+JobRole,str,9,"['Sales Executive', 'Research Scientist', 'Laboratory Technician']",Specific occupational role title
+JobSatisfaction,int64,4,"[4, 2, 3]",Employee self-reported job satisfaction (1-4)
+MaritalStatus,str,3,"['Single', 'Married', 'Divorced']","Marital status (Single, Married, Divorced)"
+MonthlyIncome,int64,1349,"[5993, 5130, 2090]",Gross monthly earnings in USD
+MonthlyRate,int64,1427,"[19479, 24907, 2396]",Monthly reimbursement or billing rate
+Prior_Companies_Count,int64,10,"[8, 1, 6]",Number of prior companies worked at before current employer
+OverTime,str,2,"['Yes', 'No']",Whether employee works overtime hours (Yes/No)
+PercentSalaryHike,int64,15,"[11, 23, 15]",Percentage increase in salary received in most recent cycle
+PerformanceRating,int64,2,"[3, 4]","Performance appraisal score (3=Excellent, 4=Outstanding)"
+RelationshipSatisfaction,int64,4,"[1, 4, 2]",Workplace relationship satisfaction rating (1-4)
+StockOptionLevel,int64,4,"[0, 1, 3]",Stock option grant tier (0-3)
+Total_Work_Experience,int64,40,"[8, 10, 7]",Total cumulative professional working career in years
+TrainingTimesLastYear,int64,7,"[0, 3, 2]",Count of professional development training sessions attended in past year
+WorkLifeBalance,int64,4,"[1, 3, 2]",Work-life balance rating (1-4)
+Company_Tenure,int64,37,"[6, 10, 0]",Total duration with current enterprise in years
+Role_Tenure,int64,19,"[4, 7, 0]",Duration serving in current job role in years
+Years_Since_Promotion,int64,16,"[0, 1, 3]",Elapsed time since last formal promotion in years
+Years_With_Manager,int64,18,"[5, 7, 0]",Duration working under current direct supervisor in years
+Attrition_Flag,int64,2,"[1, 0]","Binary indicator: 1 if departed (Yes), 0 if retained (No)"
+Education_Level,str,5,"['College', 'Below College', 'Master']",Descriptive educational credential
+Environment_Satisfaction_Level,str,4,"['Medium', 'High', 'Very High']",Engineered or derived workforce analytical metric
+Job_Satisfaction_Level,str,4,"['Very High', 'Medium', 'High']",Engineered or derived workforce analytical metric
+Relationship_Satisfaction_Level,str,4,"['Low', 'Very High', 'Medium']",Engineered or derived workforce analytical metric
+Job_Involvement_Level,str,4,"['High', 'Medium', 'Very High']",Engineered or derived workforce analytical metric
+Work_Life_Balance_Level,str,4,"['Bad', 'Better', 'Good']",Engineered or derived workforce analytical metric
+Performance_Rating_Level,str,2,"['Excellent', 'Outstanding']",Engineered or derived workforce analytical metric
+Age_Group,category,5,"['35-44', '45-54', '25-34']",Binned demographic age bracket
+Tenure_Cohort,category,4,"['6-10 Yrs (Experienced)', '0-2 Yrs (Early)', '3-5 Yrs (Mid-Level)']",Career tenure stage grouping
+Salary_Tier,category,5,"['Tier 3 ($5k-$7.5k)', 'Tier 1 (<$3k)', 'Tier 2 ($3k-$5k)']",Compensation tier bracket
+Commute_Tier,category,4,"['Short (1-5 km)', 'Medium (6-10 km)', 'Extreme (>20 km)']",Binned commute distance group
+Composite_Satisfaction_Score,float64,13,"[2.0, 3.0, 3.25]",Average composite score across 4 satisfaction dimensions (1-4 scale)
+Stagnation_Index,float64,130,"[0.0, 0.091, 0.333]",Ratio of time without promotion relative to company tenure
+Manager_Stability_Ratio,float64,116,"[0.714, 0.636, 0.0]",Ratio of tenure with current manager relative to total company tenure
+Salary_JobLevel_Ratio,float64,139,"[1.09, 0.93, 0.75]",Employee monthly income relative to department/job level peer average
+Flight_Risk_Score,float64,17,"[5.0, 0.0, 6.0]",Multi-factor empirical risk score (higher = higher turnover probability)
+Flight_Risk_Tier,category,3,"['Critical Risk', 'Low Risk', 'Moderate Risk']","Actionable classification (Low, Moderate, Critical Risk)"
