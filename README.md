@@ -1,22 +1,67 @@
-# HR Analytics & Workforce Intelligence: Employee Attrition & Retention
+# 📊 HR Analytics & Workforce Intelligence: Employee Attrition & Retention
 
-A comprehensive People Analytics project analyzing workforce attrition, turnover risk factors, and organizational retention economics using the IBM HR Analytics dataset.
+An end-to-end People Analytics project analyzing employee turnover, flight risk drivers, and retention economics using the **IBM HR Analytics dataset** (1,470 records).
+
+Rather than using third-party BI software, this project delivers an executive-ready, formula-driven **Microsoft Excel Dashboard** backed by a full analytical foundation in **Python (Pandas, NumPy, SciPy, Seaborn)** and an **ANSI-compliant SQL Analytical Engine (SQLite)**.
 
 ---
 
-## 📌 Project Overview
+## 🖥️ Executive Dashboard Preview
 
-This project diagnoses the primary drivers of employee turnover across departments, job roles, and compensation bands. Rather than using external BI platforms, this project delivers an executive-ready, formula-driven **Microsoft Excel Dashboard** backed by **Python (Pandas, SciPy, Seaborn)** and an **ANSI-compliant SQL Analytical Engine (SQLite)**.
+![HR Analytics & Workforce Intelligence Dashboard](Screenshot/dashboard_preview.png)
+
+---
+
+## 📌 Executive Dashboard Architecture
+
+The primary deliverable is **`HR_Analytics_and_Workforce_Intelligence.xlsx`**, featuring a dynamic executive cockpit built in Microsoft Excel:
+
+### 1. Hero KPI Scorecards
+- **Total Workforce**: `1,470` active enterprise headcount (`=COUNTA(Data!A2:A1471)`)
+- **Total Departures**: `237` leavers to date (`=COUNTIF(Data!B2:B1471, "Yes")`)
+- **Overall Attrition Rate**: `16.1%` (`=D7/B7`), exceeding the standard 12% target threshold
+- **Avg Monthly Salary**: `$6,503` enterprise mean base compensation (`=AVERAGE(Data!R2:R1471)`)
+- **Est. Annual Turnover Loss**: `$68,07,246` based on the 50% annual salary replacement cost standard
+
+### 2. Department Attrition & Budget Summary
+| Department | Headcount | Leavers | Attrition % | Avg Monthly Pay |
+| :--- | :---: | :---: | :---: | :---: |
+| **Sales** | 446 | 92 | **20.6%** (High Risk) | $6,959 |
+| **Research & Development** | 961 | 133 | **13.8%** | $6,281 |
+| **Human Resources** | 63 | 12 | **19.0%** | $6,655 |
+| **Enterprise Total** | **1,470** | **237** | **16.1%** | **$6,503** |
+
+### 3. Overtime Workload vs. Flight Risk
+- **Standard Hours (No OT)**: 1,054 staff | 110 leavers | **10.4% attrition** | $6,485 avg pay
+- **Overtime Required (OT)**: 416 staff | 127 leavers | **30.5% attrition** | $6,549 avg pay
+- **Overtime Risk Multiplier**: **2.9x Risk** (+20.1% turnover gap)
+
+### 4. Top Flight Risk Roles Leaderboard
+- **Sales Representative**: **39.8%** attrition (Critical Risk)
+- **Laboratory Technician**: **23.9%** attrition (Critical Risk)
+- **Human Resources**: **23.1%** attrition (Critical Risk)
+- **Sales Executive**: **17.5%** attrition
+- **Research Scientist**: **16.1%** attrition
+- **Manufacturing Director**: **6.9%**
+- **Healthcare Representative**: **6.9%**
+- **Manager**: **5.6%**
+- **Research Director**: **2.5%** (Most Stable)
+
+### 5. Native Excel Analytical Charts
+- **Department Turnover Bar Chart**: Clustered column chart with individual departmental color coding (Sales 20.6%, R&D 13.8%, HR 19.0%) and data labels.
+- **Overtime Impact Comparison**: Direct visual contrast of standard hours (10.4%) vs overtime required (30.5%).
 
 ---
 
 ## 📊 Dataset Provenance & Attribution
 
-- **Dataset Name**: IBM HR Analytics Employee Attrition & Performance
-- **Original Publisher**: IBM Watson Analytics
-- **Primary Source**: Available publicly on Kaggle ([IBM HR Analytics Attrition Dataset](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset))
-- **Records**: 1,470 employee entries across 35 original attributes
-- **Data Characteristics**: This is a **synthetic benchmark dataset** engineered by IBM data scientists to emulate realistic Fortune 500 corporate workforce distributions. It incorporates authentic human-capital dynamics (burnout, pay compression, tenure milestones) while fully respecting Personally Identifiable Information (PII) and privacy regulations.
+- **Dataset Name**: IBM HR Analytics Employee Attrition & Performance (`WA_Fn-UseC_-HR-Employee-Attrition.csv`)
+- **Creator / Publisher**: IBM Watson Analytics Data Science Team
+- **Official Source**: Available publicly on Kaggle ([IBM HR Analytics Attrition Dataset](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset))
+- **Records**: 1,470 employee rows across 35 original features
+- **Dataset Nature (Synthetic Benchmark)**:
+  - Corporate HR data contains sensitive personal and compensation records that cannot legally be published under **PII, GDPR, and privacy regulations**.
+  - To provide an industry benchmark, **IBM data scientists synthetically generated this dataset** to mirror real-world corporate workforce distributions, embedding authentic operational relationships such as overtime burnout, pay compression, and early-career turnover cliffs.
 
 ---
 
@@ -25,29 +70,30 @@ This project diagnoses the primary drivers of employee turnover across departmen
 ```
 ├── HR_Analytics_and_Workforce_Intelligence.xlsx   # Master Interactive Excel Dashboard
 ├── requirements.txt                              # Python environment dependencies
-├── .gitignore                                    # Git ignore rules for Python & Excel
+├── .gitignore                                    # Excludes temp files, caches, and Excel lockfiles
 ├── README.md                                     # Project documentation
 │
-├── assets/
-│   └── dashboard_preview.png                     # Dashboard snapshot
+├── Screenshot/
+│   ├── Screenshot 2026-11-24 001138.png          # Original dashboard screenshot
+│   └── dashboard_preview.png                     # Formatted preview for README
 │
 ├── data/
-│   ├── raw_hr_data.csv                           # Original raw dataset
-│   ├── cleaned_hr_data.csv                       # Cleaned dataset with 50 features
+│   ├── raw_hr_data.csv                           # Original IBM HR dataset
+│   ├── cleaned_hr_data.csv                       # Cleaned dataset with 50 engineered attributes
 │   ├── hr_workforce.db                           # SQLite relational database
-│   └── data_dictionary.csv                       # Field definitions and schema metadata
+│   └── data_dictionary.csv                       # Data schema and variable definitions
 │
 ├── notebooks/
-│   └── HR_Analytics_Workforce_Intelligence.ipynb # Interactive Jupyter analysis notebook
+│   └── HR_Analytics_Workforce_Intelligence.ipynb # Interactive Jupyter exploration notebook
 │
 ├── sql/
-│   └── hr_analytics_queries.sql                  # Analytical SQL queries (CTEs, Window Funcs)
+│   └── hr_analytics_queries.sql                  # Analytical SQL queries (CTEs, Window Functions)
 │
 ├── scripts/
 │   ├── data_cleaning.py                          # Data cleansing & feature engineering
-│   ├── statistical_analysis.py                   # SciPy hypothesis testing & odds ratios
-│   ├── build_sql_database.py                     # SQLite builder & query runner
-│   ├── generate_visualizations.py                # 300-DPI Seaborn/Matplotlib charts
+│   ├── statistical_analysis.py                   # SciPy hypothesis testing (Chi-Square & T-Test)
+│   ├── build_sql_database.py                     # SQLite database population & query runner
+│   ├── generate_visualizations.py                # 300-DPI Seaborn/Matplotlib visual figures
 │   └── build_dashboard.py                        # Automated openpyxl Excel dashboard generator
 │
 ├── visualizations/
@@ -63,52 +109,49 @@ This project diagnoses the primary drivers of employee turnover across departmen
 
 ---
 
-## 🔍 Key Findings & Workforce Insights
+## 🔬 Statistical Hypothesis Testing (SciPy)
 
-1. **Overtime Multiplier**: Employees working overtime have an attrition rate of **30.5%** compared to **10.4%** for standard hours (Odds Ratio: **3.77**, p < 0.001). Overtime is the strongest single predictor of turnover.
-2. **Early-Career Flight Risk**: Turnover is heavily concentrated in the first 24 months of tenure (**29.8%** attrition for tenure $\le$ 2 years vs **12.0%** for experienced staff).
-3. **Compensation Inequity**: Departing employees earn an average of **29.9% less** than retained peers ($4,787/month vs $6,833/month). Lowest quartile earners (<$2,911/month) face a **29.4%** turnover rate.
-4. **Departmental Variance**: **Sales** leads organizational turnover at **20.6%**, followed by **Human Resources** at **19.0%** and **Research & Development** at **13.8%**.
-5. **Annual Turnover Cost**: Estimated annual organizational turnover loss totals approximately **$6.8M** based on standard 50% replacement cost benchmarks.
+Every operational hypothesis was rigorously evaluated using **SciPy** against the null hypothesis ($H_0$):
+
+1. **OverTime Workload** ($\chi^2 = 87.56, p = 8.16 \times 10^{-21}$):
+   - Odds Ratio: **3.77** (95% CI: 2.83–5.03). Overtime workers have nearly 3.8x higher odds of turnover.
+2. **Monthly Compensation** (Welch's $t = 11.23, p = 4.43 \times 10^{-13}$):
+   - Departing employees earn an average of **29.9% less** than retained peers ($4,787 vs $6,833/month, Cohen's $d = -0.440$).
+3. **Early-Career Tenure** ($\chi^2 = 65.70, p = 3.56 \times 10^{-14}$):
+   - Staff with tenure $\le$ 2 years experience a **29.8% turnover rate** vs **12.0%** for established staff (Odds Ratio: **3.13**).
+4. **Percentage Salary Hike** ($t = 0.50, p = 0.6144$):
+   - **Not statistically significant**. Generic across-the-board percentage raises (15.2% vs 15.1%) do not reduce flight risk if base salary is below market median.
 
 ---
 
 ## 🛠️ Technology Stack
 
-- **Spreadsheets**: Microsoft Excel (Multi-tab dynamic formulas: `COUNTA`, `COUNTIF`, `COUNTIFS`, `AVERAGEIF`, `SUMIF`, native charts)
-- **Database**: SQLite / ANSI SQL (CTEs, `DENSE_RANK()`, `NTILE()`, Group By aggregations)
+- **Spreadsheets**: Microsoft Excel (`COUNTA`, `COUNTIF`, `COUNTIFS`, `AVERAGEIF`, `SUMIF`, native charts)
+- **Database & SQL**: SQLite / ANSI SQL (CTEs, `DENSE_RANK()`, `NTILE()`, Aggregations)
 - **Data Wrangling**: Python, Pandas, NumPy
-- **Inferential Statistics**: SciPy (`scipy.stats.chi2_contingency`, Welch's Two-Sample t-test, Mann-Whitney U, Odds Ratios)
+- **Inferential Statistics**: SciPy (`scipy.stats.chi2_contingency`, Welch's Two-Sample t-test, Odds Ratios)
 - **Data Visualization**: Matplotlib, Seaborn
 
 ---
 
-## 🚀 Getting Started
+## 🚀 How to Run the Pipeline
 
-### 1. Clone & Install Dependencies
 ```bash
-git clone https://github.com/your-username/hr-analytics-workforce-intelligence.git
-cd hr-analytics-workforce-intelligence
+# 1. Install dependencies
 pip install -r requirements.txt
-```
 
-### 2. Run the Full Analytical Pipeline
-```bash
-# Clean data and generate engineered features
+# 2. Run data cleaning and feature engineering
 python scripts/data_cleaning.py
 
-# Run hypothesis testing with SciPy
+# 3. Execute statistical tests (SciPy)
 python scripts/statistical_analysis.py
 
-# Build SQLite database and execute queries
+# 4. Build SQLite database and run business queries
 python scripts/build_sql_database.py
 
-# Generate high-resolution visual plots
+# 5. Generate high-resolution plots
 python scripts/generate_visualizations.py
 
-# Build the master Excel workbook
+# 6. Build the master Excel dashboard
 python scripts/build_dashboard.py
 ```
-
-### 3. Open the Interactive Dashboard
-Open `HR_Analytics_and_Workforce_Intelligence.xlsx` in Microsoft Excel to interact with the executive KPI cards, department breakdowns, and overtime risk analysis.
